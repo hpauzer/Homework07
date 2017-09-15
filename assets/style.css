@@ -1,0 +1,36 @@
+.jumbotron {
+    background-color: #694228;
+    color: white;
+    font-family: 'Heebo', sans-serif;
+}
+
+h1 {
+    margin-left: 20%;
+    margin-right: auto;
+}
+
+h3 {
+    margin-left: 37%;
+    margin-right: auto;
+}
+
+#panel-heading1 {
+    background-color: #0070C0;
+    border-color: #0070C0;
+    color: white;
+}
+
+#panel-heading2 {
+    background-color: #0070C0;
+    border-color: #0070C0;
+    color: white;
+}
+
+#entry-form {
+    border-color: #0070C0;
+}
+
+#submit-button {
+    color: white;
+    background-color: #0070C0;
+}
