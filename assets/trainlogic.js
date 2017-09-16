@@ -63,19 +63,20 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
     var a = moment.unix(trainFirstTrainTime);
 
     var nextArrival = a.clone().add(trainFrequency, "HH:mm")
+    var time = moment("HH:mm");
 
+    //minutes away = Next arrival - current time, 
+    var minAway = nextArrival.subtract(time);
     var prettyNextArrival = moment.unix(nextArrival).format("HH:mm");
+
+
     console.log("Calculating next arrival");
     console.log(("First Train Time = "), trainFirstTrainTime);
     console.log(("Train Frequency = "), trainFrequency);
     console.log(("Next Arrival = "), nextArrival);
-    console.log(("Next Arrival = "), prettNextArrival);
+    console.log(("Next Arrival = "), prettyNextArrival);
 
 
-
-
-    //minutes away = Next arrival - current time, 
-    // var minAway =
-
-
+    // Add each train's data into the table
+    $("#train-table > tbody").append("<tr><td>" + trainName + "</td><td>" + trainDestination + "</td><td>" + trainFrequency + "</td><td>" + prettyNextArrival + "</td><td>" + minAway + "</td></tr>");
 });
